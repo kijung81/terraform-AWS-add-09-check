@@ -38,20 +38,20 @@ resource "aws_lb_target_group" "alb_tg" {
   }  
 }
 
-resource "aws_lb_target_group_attachment" "web1" {
-  target_group_arn = aws_lb_target_group.alb_tg.arn
-  target_id        = aws_instance.web1.id
-  port             = 80
-}
+#resource "aws_lb_target_group_attachment" "web1" {
+#  target_group_arn = aws_lb_target_group.alb_tg.arn
+#  target_id        = aws_instance.web1.id
+#  port             = 80
+#}
 
-resource "aws_lb_target_group_attachment" "web2" {
-  target_group_arn = aws_lb_target_group.alb_tg.arn
-  target_id        = aws_instance.web2.id
-  port             = 80
-}
+#resource "aws_lb_target_group_attachment" "web2" {
+#  target_group_arn = aws_lb_target_group.alb_tg.arn
+#  target_id        = aws_instance.web2.id
+#  port             = 80
+#}
 
-# resource "aws_lb_target_group_attachment" "web3" {
-#   target_group_arn = aws_lb_target_group.alb_tg.arn
-#   target_id        = aws_instance.web3.id
-#   port             = 80
-# }
+ resource "aws_lb_target_group_attachment" "web3" {
+   target_group_arn = aws_lb_target_group.alb_tg.arn
+   target_id        = aws_instance.web3.id
+   port             = 80
+ }
