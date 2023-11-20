@@ -28,7 +28,7 @@ resource "aws_instance" "web1" {
     sudo amazon-linux-extras install -y nginx1
     sudo systemctl enable nginx
     sudo systemctl start nginx
-    EOF  
+    EOF
 }
 
 resource "aws_instance" "web2" {
